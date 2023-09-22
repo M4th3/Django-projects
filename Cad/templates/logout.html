@@ -1,0 +1,10 @@
+{% extends 'model.html' %}
+{% block title %} Logout page {% endblock %}
+{% block conteudo %}
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+</form>
+<button type="submit">Log out</button>
+{% endblock%}

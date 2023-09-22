@@ -1,0 +1,21 @@
+{% extends 'model.html' %}
+{% block conteudo %}
+{% if request.user.is_authenticated %}
+<a href="{% url 'createusuario' %}">Cadastrar seu usuário</a>
+<a href="{% url 'createcargo' %}" > Cadastrar um cargo</a>
+<a href="">Atualizar um usuário</a>
+<a href="">Atualizar um cargo</a>
+<a href="">Deletar um usuário</a>
+<a href="">Deletar um cargo</a>
+<a href="">Informações de um usuário</a>
+<a href="">Informações de um cargo</a>
+{% else %}
+<a href="{% url 'login' %}">Clique aqui e faça seu login</a>
+<a href="{% url '' %}">Clique aqui e crie sua conta</a>
+{% endif %}
+
+
+
+
+
+{% endblock %}

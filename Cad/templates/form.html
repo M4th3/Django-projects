@@ -1,0 +1,10 @@
+{% extends 'model.html' %}
+{% block title %}Faça seu cadastro ou atualize algum dado {% endblock %}
+{% block conteudo %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{ form.as_p }} 
+    <button type="submit">Cadastrar</button>
+</form>
+
+{% endblock %}

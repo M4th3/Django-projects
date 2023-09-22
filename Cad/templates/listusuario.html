@@ -1,0 +1,13 @@
+{% extends 'form.html' %}
+
+{% block title %} Lista de Usuários {% endblock %}
+{% block conteudo %}
+
+{% for usuario in object_list %}
+<ul> Usuário:
+    <li>Nome do usuário: {{ usuario.nome }}</li>
+    <li>Idade: {{ usuario.idade }}</li>
+    <li>CPF: {{ usuario.cpf }}</li>
+</ul>
+{% endfor %}
+{% endblock %}

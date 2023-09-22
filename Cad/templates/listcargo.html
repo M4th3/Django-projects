@@ -1,0 +1,17 @@
+{% extends 'form.html' %}
+
+{% block title %} Lista de cargos {% endblock %}
+{% block conteudo %}
+{% if request.user.is_authenticated %}
+{% for cargo in object_list %}
+<ul> Cargo:
+    <li>Nome do cargo: {{ cargo.cargo }}</li>
+    <li>Função: {{ cargo.funcao }}</li>
+    <li>Usuários: {{ cargo.usuario }}</li>
+</ul>
+{% endfor %}
+{% else %}
+<h1> Você não pode ver as informações dessa página sem estar logado</h1>
+<p>Faça o login clicando<a href="{% url 'login' %}"> aqui</a> para continuar</p>
+{% endif%}
+{% endblock %}
